@@ -8,7 +8,7 @@ import ReviewItem from '../ReviewItem/ReviewItem';
 import './Orders.css';
 
 const Orders = () => {
-    const [products, setProducts] = useProducts();
+    const [products] = useProducts();
     const [cart, setCart] = useCart(products);
     const navigate = useNavigate();
     const handleRemoveProduct = product =>{
@@ -31,7 +31,7 @@ const Orders = () => {
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
-                        <button onClick={()=>navigate('/inventory')}>Proceed Checkout </button>
+                        <button onClick={()=>navigate('/shipment')}>Proceed Shipping </button>
                 </Cart>
             </div>
         </div>

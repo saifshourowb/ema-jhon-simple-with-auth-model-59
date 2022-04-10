@@ -55,32 +55,28 @@ const Signup = () => {
     <div className="form-container">
      <div>
         <h2 className="form-title">Sign up</h2>
-    <form onSubmit={handelCreateUser}>
-    <div className="input-grop">
-        <label htmlFor="email">Email</label>
+         <form onSubmit={handelCreateUser}>
+         <div className="input-grop">
+         <label htmlFor="email">Email</label>
          <input onBlur={handelEmailBlur} type="email" name="email" id="" required/>
+        </div>
+            <div className="input-grop">
+                <label htmlFor="password">password</label>
+                <input onBlur={handelPasswordBlur} type="password" name="password" id="" required/>
+            </div>
+                <div className="input-grop">
+                <label htmlFor="confirm-password">Confirm password</label>
+                <input onBlur={handelConfirmPasswordBlur} type="password" name="confirm-password" id="" required/>
+            </div>
+            <p style={{color: 'red'}}>{error}</p>
+            {/* <p style={{color: 'red'}}>{hookerror}</p> */}
+            <input className="form-submit" type="submit" value="Sign up"></input>
+        </form>
+            <p className="p-title">
+            All rady have an acount?<Link className="form-link" to ="/login">Login</Link>
+         </p>                                       
+        </div>           
     </div>
-
-    <div className="input-grop">
-         <label htmlFor="password">password</label>
-        <input onBlur={handelPasswordBlur} type="password" name="password" id="" required/>
-    </div>
-
-
-    <div className="input-grop">
-        <label htmlFor="confirm-password">Confirm password</label>
-        <input onBlur={handelConfirmPasswordBlur} type="password" name="confirm-password" id="" required/>
-    </div>
-    <p style={{color: 'red'}}>{error}</p>
-    {/* <p style={{color: 'red'}}>{hookerror}</p> */}
-
-        <input className="form-submit" type="submit" value="Sign up"></input>
-    </form>
-    <p className="p-title">
-        All rady have an acount?<Link className="form-link" to ="/login">Login</Link>
-    </p>                                       
-    </div>           
-</div>
         
         
     );
